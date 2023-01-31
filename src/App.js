@@ -9,6 +9,11 @@ import DriverCard from './components/DriverCard';
 import CreditCard from './components/CreditCard';
 import LikeButton from './components/LikeButton';
 import ClickablePicture from './components/ClickablePicture';
+import Dice from './components/Dice';
+import Carousel from './components/Carousel';
+import NumbersTable from './components/NumbersTable';
+import Facebook from './components/Facebook';
+import SignupPage from './components/SignupPage';
 
 function App() {
   return (
@@ -123,7 +128,27 @@ function App() {
       imgClicked='maxence-glasses.png'
     />
 
-    </div>
+    <h1>Iteration 10</h1>  
+
+    <Dice/>
+
+    <h1>Iteration 11</h1>  
+    
+    <Carousel
+      images={[
+        'https://randomuser.me/api/portraits/women/1.jpg',
+        'https://randomuser.me/api/portraits/men/1.jpg',
+        'https://randomuser.me/api/portraits/women/2.jpg',
+        'https://randomuser.me/api/portraits/men/2.jpg'
+      ]}
+    />
+    <h1>Iteration 12</h1>
+    <NumbersTable limit={12}/>
+    <h1>Iteration 13 and 14</h1>
+    <Facebook/>
+    <h1>Iteration 15</h1>
+    <SignupPage/>
+</div>
   );
 }
 

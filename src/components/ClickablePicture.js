@@ -1,20 +1,18 @@
-import { click } from '@testing-library/user-event/dist/click'
-import React, { useState } from 'react'
+import { useState } from 'react';
 
 function ClickablePicture(props) {
-    const firstImage = `./../${props.img}`
-    const secondImage = `./../${props.imgClicked}`
-    const [image, setImage] = useState(firstImage)
 
-    function clickableImage() {
-         setImage(secondImage) 
-    }
+  const [img, setImg] = useState(true);
+
+  const toggleImg = () => {
+    setImg(!img);
+  };
+
   return (
-    <>
-        <img onClick={clickableImage} src={image}/>
-    </>
-  )
+    <div>
+      <img onClick={toggleImg} src= {img ? props.img : props.imgClicked}/>
+    </div>
+  );
 }
 
-
-export default ClickablePicture
+export default ClickablePicture;
